@@ -1,0 +1,17 @@
+[package]
+name = "lfi-runtime-minimal"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "runtime"
+path = "main.rs"
+
+[profile.release]
+opt-level = "z"
+panic = "abort"
+lto = "fat"
+codegen-units = 1
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(guest)'] }
