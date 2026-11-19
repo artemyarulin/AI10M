@@ -1,0 +1,13 @@
+[package]
+name = "ten-million-webservers"
+edition = "2024"
+
+[dependencies]
+libc = "0.2"
+smoltcp = { version = "=0.14.0", default-features = false, features = ["std", "medium-ethernet", "medium-ip", "phy-tuntap_interface", "proto-ipv4", "socket-tcp"] }
+xsk-rs = "=0.11.0"
+dpdk-net = { git = "https://github.com/youyuanwu/rust-dpdk-net" }
+
+[build-dependencies]
+cc = "1"
+pkgconf = "0.2"
