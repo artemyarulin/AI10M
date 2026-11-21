@@ -6,4 +6,5 @@ Let's try to solve that one: How to run 10 million of Codex CLI on one machine w
 
 - [Part 1](https://kapteko.com/running-10-million-codex-clis-on-one-server-lfi-processes/) tells about LFI, sandboxes and processes overhead in Linux. [poc/lfi-runtime-minimal](poc/lfi-runtime-minimal/) is Rust LFI runtime, a throw away PoC
 - [Part 2](https://kapteko.com/userland_linux_scheduler_in_rust) tells about building custom userland schedule. Source available at [poc/scheduler-raw-threads](poc/scheduler-raw-threads/)
+- [Part 3](https://kapteko.com/15_million_webservers/) explores extemely dense environments for running millions of webservers - userland network stack, smoltcp, DPDK, AF_XDP. Proof of concept is at [pod/ten-million-webservers](poc/ten-million-webservers/)
 
